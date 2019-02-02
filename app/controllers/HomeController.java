@@ -63,6 +63,7 @@ public class HomeController extends Controller {
 
     @Transactional
     public Result updateHomeById(Integer id) {
+        LOGGER.debug("entered update home by id");
 
         if (null == id) {
             return badRequest("Id must be provided");

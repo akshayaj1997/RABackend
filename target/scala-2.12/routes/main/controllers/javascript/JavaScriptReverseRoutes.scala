@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/nidhi_p/Documents/dev/RentAwayBackend/conf/routes
-// @DATE:Fri Feb 01 12:12:42 IST 2019
+// @SOURCE:/Users/nidhi_p/Documents/dev/RABackend/conf/routes
+// @DATE:Fri Feb 01 14:42:15 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 

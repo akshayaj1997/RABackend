@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 //import java.util.Optional;
 
-public class HomeDaoImpl<home> implements HomeDao {
+public class HomeDaoImpl implements HomeDao {
 
     final JPAApi jpaApi;
 
@@ -47,11 +47,11 @@ public class HomeDaoImpl<home> implements HomeDao {
             throw new IllegalArgumentException("Home must be provided");
         }
 
-        if(null == home.getName()){
+        if(null == home.getId()){
             throw new IllegalArgumentException("Home Id must be provided");
         }
 
-        final Home existingHome = jpaApi.em().find(Home.class, home.getName());
+        final Home existingHome = jpaApi.em().find(Home.class, home.getId());
         if(null == existingHome) {
             return null;
         }

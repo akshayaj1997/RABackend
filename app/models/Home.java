@@ -17,13 +17,6 @@ public class Home {
     @JsonProperty("name")
     private  String name;
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
 
     @Basic
     @JsonProperty("location")
@@ -52,6 +45,15 @@ public class Home {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
 
 
 
