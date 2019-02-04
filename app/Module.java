@@ -23,7 +23,7 @@ public class Module extends AbstractModule {
     public void configure() {
 
         //bind(HomeDao.class).to(FakeHomeDao.class);
-        bind(HomeDao.class).to(HomeDaoImpl.class);
+        bind(UserDao.class).to(UserDaoImpl.class);
         // Use the system clock as the default implementation of Clock
         bind(Clock.class).toInstance(Clock.systemDefaultZone());
         // Ask Guice to create an instance of ApplicationTimer when the

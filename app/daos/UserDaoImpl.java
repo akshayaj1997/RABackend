@@ -4,11 +4,13 @@ import models.User;
 import play.db.jpa.JPAApi;
 
 import javax.inject.Inject;
+//import javax.inject.Singleton;
 import javax.persistence.TypedQuery;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+//@Singleton
 public class UserDaoImpl implements UserDao {
 
     final JPAApi jpaApi;
@@ -85,5 +87,22 @@ public class UserDaoImpl implements UserDao {
             jpaApi.em().persist(item);
         }
         return userItems;
+    }
+    @Override
+    public User findUserByName(String username) {
+//        final User user = jpaApi.em().find(User.class,username);
+//        if(null == user){
+//            throw new IllegalArgumentException("username is invalid");
+//        }
+        return null;
+    }
+
+    @Override
+    public User findUserByAuthToken(String authToken) {
+//        final User user = jpaApi.em().find(User.class,authToken);
+//        if(null == user){
+//            throw new IllegalArgumentException("authToken is invalid or expired. signin again");
+//        }
+        return null;
     }
 }

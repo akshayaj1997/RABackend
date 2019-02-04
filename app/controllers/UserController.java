@@ -6,6 +6,7 @@ import controllers.security.Authenticator;
 import daos.UserDao;
 import models.User;
 import play.Logger;
+import play.db.jpa.Transactional;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -27,7 +28,7 @@ public class UserController extends Controller {
     public UserController(UserDao userDao) {
         this.userDao = userDao;
     }
-
+    @Transactional
     public Result registerUser() {
 
         final JsonNode json = request().body().asJson();
@@ -63,14 +64,14 @@ public class UserController extends Controller {
 
         return ok(result);
     }
-
+    @Transactional
     private String generateSalt() {
 
         // TODO Generate random string
 
         return "ABC";
     }
-
+    @Transactional
     private String generateHash(String salt, String password, int iterations) {
         try {
 
@@ -90,7 +91,7 @@ public class UserController extends Controller {
             return null;
         }
     }
-
+    @Transactional
     public Result signInUser() {
 
         final JsonNode json = request().body().asJson();
@@ -127,7 +128,7 @@ public class UserController extends Controller {
 
         return ok(result);
     }
-
+    @Transactional
     private String generateAccessToken() {
 
         // TODO Generate a random string of 20 (or more characters)
@@ -135,6 +136,8 @@ public class UserController extends Controller {
         return "ABC1234";
     }
 
+
+    @Transactional
     @Authenticator
     public Result signOutUser() {
 
@@ -146,7 +149,7 @@ public class UserController extends Controller {
 
         return ok();
     }
-
+    @Transactional
     @Authenticator
     //@IsAdmin
     public Result getCurrentUser() {

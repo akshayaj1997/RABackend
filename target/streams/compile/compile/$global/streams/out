@@ -1,3 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RentAwayBackend/conf/routes:13:1: value index is not a member of controllers.HomeController[0m
-[0m[[0m[31merror[0m] [0m[0mGET     /                           controllers.HomeController.index[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RABackend/app/daos/UserDaoImpl.java:12:1: daos.UserDaoImpl is not abstract and does not override abstract method findUserByAuthToken(java.lang.String) in daos.UserDao[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class UserDaoImpl implements UserDao {[0m

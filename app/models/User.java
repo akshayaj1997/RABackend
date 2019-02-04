@@ -3,6 +3,8 @@ package models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Id;
+
 public class User {
 
     public enum Role {
@@ -16,6 +18,7 @@ public class User {
         LOCKED
     }
 
+    @Id
     private Integer id;
     private String username;
 
