@@ -18,7 +18,6 @@ import java.security.NoSuchAlgorithmException;
 public class UserController extends Controller {
 
 
-
     private final static Logger.ALogger LOGGER = Logger.of(UserController.class);
     private final static int HASH_ITERATIONS = 100;
 
@@ -28,6 +27,7 @@ public class UserController extends Controller {
     public UserController(UserDao userDao) {
         this.userDao = userDao;
     }
+
     @Transactional
     public Result registerUser() {
 
@@ -39,7 +39,7 @@ public class UserController extends Controller {
             return badRequest("Missing mandatory parameters");
         }
 
-        final String password = json.get("password").asText();
+        final String password = json.get("passwordHash").asText();
         if (null == password) {
             return badRequest("Missing mandatory parameters");
         }
@@ -64,6 +64,7 @@ public class UserController extends Controller {
 
         return ok(result);
     }
+
     @Transactional
     private String generateSalt() {
 
@@ -71,6 +72,7 @@ public class UserController extends Controller {
 
         return "ABC";
     }
+
     @Transactional
     private String generateHash(String salt, String password, int iterations) {
         try {
@@ -79,9 +81,12 @@ public class UserController extends Controller {
 
             // TODO Run in a loop x iterations
             // TODO User a better hash function
+
+
             final MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] messageDigest = md.digest(contat.getBytes());
             final String passwordHash = BaseEncoding.base16().lowerCase().encode(messageDigest);
+
 
             LOGGER.debug("Password hash {}", passwordHash);
 
@@ -91,18 +96,20 @@ public class UserController extends Controller {
             return null;
         }
     }
+
     @Transactional
     public Result signInUser() {
 
         final JsonNode json = request().body().asJson();
 
         final String username = json.get("username").asText();
-        final String password = json.get("password").asText();
+        final String password = json.get("passwordHash").asText();
         if (null == password || null == username) {
             return badRequest("Missing mandatory parameters");
         }
-
+        //LOGGER.debug("entered signin");
         final User existingUser = userDao.findUserByName(username);
+        //LOGGER.debug("user details taken");
 
         if (null == existingUser) {
             return unauthorized("Wrong username");
@@ -128,6 +135,7 @@ public class UserController extends Controller {
 
         return ok(result);
     }
+
     @Transactional
     private String generateAccessToken() {
 
@@ -142,13 +150,12 @@ public class UserController extends Controller {
     public Result signOutUser() {
 
         final User user = (User) ctx().args.get("user");
-
         user.setAccessToken(null);
-
         userDao.update(user);
 
         return ok();
     }
+
     @Transactional
     @Authenticator
     //@IsAdmin

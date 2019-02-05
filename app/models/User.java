@@ -3,8 +3,9 @@ package models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
 public class User {
 
     public enum Role {
@@ -19,19 +20,41 @@ public class User {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("id")
     private Integer id;
+
+    @Basic
+    @JsonProperty("username")
     private String username;
 
+    @Basic
+    @JsonProperty("email")
+    private String email;
+
+    @Basic
     @JsonIgnore
+    @JsonProperty("passwordHash")
     private String passwordHash;
+
+    @Basic
     @JsonIgnore
+    @JsonProperty("salt")
     private String salt;
+
+    @Basic
     @JsonIgnore
+    @JsonProperty("hashIterations")
     private Integer hashIterations;
 
-    private String email;
+    @Basic
+    @JsonProperty("role")
     private Role role;
+    @Basic
+    @JsonProperty("state")
     private State state;
+    @Basic
+    @JsonProperty("accessToken")
     private String accessToken;
 
     public User() {

@@ -1,2 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RABackend/app/daos/UserDaoImpl.java:12:1: daos.UserDaoImpl is not abstract and does not override abstract method findUserByAuthToken(java.lang.String) in daos.UserDao[0m
-[0m[[0m[31merror[0m] [0m[0mpublic class UserDaoImpl implements UserDao {[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RABackend/app/daos/UserDaoImpl.java:99:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable username[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class daos.UserDaoImpl[0m

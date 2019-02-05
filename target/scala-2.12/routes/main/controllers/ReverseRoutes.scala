@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/nidhi_p/Documents/dev/RABackend/conf/routes
-// @DATE:Mon Feb 04 10:25:28 IST 2019
+// @DATE:Tue Feb 05 13:54:41 IST 2019
 
 import play.api.mvc.Call
 
@@ -8,23 +8,8 @@ import play.api.mvc.Call
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:12
+// @LINE:5
 package controllers {
-
-  // @LINE:21
-  class ReverseAsyncController(_prefix: => String) {
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:21
-    def message(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "message")
-    }
-  
-  }
 
   // @LINE:24
   class ReverseAssets(_prefix: => String) {
@@ -85,6 +70,60 @@ package controllers {
     def signInUser(): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "users/signin")
+    }
+  
+  }
+
+  // @LINE:5
+  class ReverseHomeController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:7
+    def updateHomeById(id:Integer): Call = {
+      
+      Call("PUT", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
+    }
+  
+    // @LINE:8
+    def deleteHomeById(id:Integer): Call = {
+      
+      Call("DELETE", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
+    }
+  
+    // @LINE:6
+    def getHomeById(id:Integer): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
+    }
+  
+    // @LINE:5
+    def createHome(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "homes")
+    }
+  
+    // @LINE:9
+    def getAllHomes(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "homes")
+    }
+  
+  }
+
+  // @LINE:21
+  class ReverseAsyncController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:21
+    def message(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "message")
     }
   
   }

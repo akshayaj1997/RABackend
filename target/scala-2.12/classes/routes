@@ -2,11 +2,11 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-#POST /homes              controllers.HomeController.createHome()
-#GET  /homes/:id          controllers.HomeController.getHomeById(id: Integer)
-#PUT  /homes/:id          controllers.HomeController.updateHomeById(id: Integer)
-#DELETE /homes/:id        controllers.HomeController.deleteHomeById(id: Integer)
-#GET  /homes              controllers.HomeController.getAllHomes()
+POST /homes              controllers.HomeController.createHome()
+GET  /homes/:id          controllers.HomeController.getHomeById(id: Integer)
+PUT  /homes/:id          controllers.HomeController.updateHomeById(id: Integer)
+DELETE /homes/:id        controllers.HomeController.deleteHomeById(id: Integer)
+GET  /homes              controllers.HomeController.getAllHomes()
 
 
 POST /users               controllers.UserController.registerUser()

@@ -1,11 +1,13 @@
 import com.google.inject.AbstractModule;
-import java.time.Clock;
-
-import daos.*;
-import models.Home;
+import daos.HomeDao;
+import daos.HomeDaoImpl;
+import daos.UserDao;
+import daos.UserDaoImpl;
 import services.ApplicationTimer;
 import services.AtomicCounter;
 import services.Counter;
+
+import java.time.Clock;
 
 /**
  * This class is a Guice module that tells Guice how to bind several
@@ -22,7 +24,7 @@ public class Module extends AbstractModule {
     @Override
     public void configure() {
 
-        //bind(HomeDao.class).to(FakeHomeDao.class);
+        bind(HomeDao.class).to(HomeDaoImpl.class);
         bind(UserDao.class).to(UserDaoImpl.class);
         // Use the system clock as the default implementation of Clock
         bind(Clock.class).toInstance(Clock.systemDefaultZone());
