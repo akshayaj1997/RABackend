@@ -15,6 +15,8 @@ libraryDependencies += guice
 
 libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.13"
 
+libraryDependencies += "org.apache.commons" % "commons-text" % "1.6"
+
 libraryDependencies ++= Seq(javaJpa, "org.hibernate" % "hibernate-entitymanager" % "5.3.7.Final")
 
 // Testing libraries for dealing with CompletionStage...

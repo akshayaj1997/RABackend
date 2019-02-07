@@ -107,7 +107,6 @@ public class UserDaoImpl implements UserDao {
         }
 
         if(null == user){
-            //Do your logic..
             return null;
         }
 

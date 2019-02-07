@@ -4,7 +4,7 @@
 		module="play-java-starter-example_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20190205135441"
+		publication="20190207120437"
 	>
 		<description>
 		play-java-starter-example
@@ -52,6 +52,7 @@
 		<dependency org="com.typesafe.play" name="play-akka-http-server_2.12" rev="2.6.20" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-guice_2.12" rev="2.6.20" conf="compile->default(compile)"/>
 		<dependency org="mysql" name="mysql-connector-java" rev="8.0.13" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-text" rev="1.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-jpa_2.12" rev="2.6.20" conf="compile->default(compile)"/>
 		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="5.3.7.Final" conf="compile->default(compile)"/>
 		<dependency org="org.assertj" name="assertj-core" rev="3.6.2" conf="test->default(compile)"/>

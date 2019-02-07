@@ -5,6 +5,9 @@ import com.google.common.io.BaseEncoding;
 import controllers.security.Authenticator;
 import daos.UserDao;
 import models.User;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.text.RandomStringGenerator;
 import play.Logger;
 import play.db.jpa.Transactional;
 import play.libs.Json;
@@ -68,9 +71,13 @@ public class UserController extends Controller {
     @Transactional
     private String generateSalt() {
 
-        // TODO Generate random string
+        int length = 10;
+        boolean useLetters = true;
+        boolean useNumbers = false;
+        String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+        LOGGER.debug("salt generated is" + generatedString);
 
-        return "ABC";
+        return generatedString;
     }
 
     @Transactional
@@ -78,13 +85,20 @@ public class UserController extends Controller {
         try {
 
             final String contat = salt + ":" + password;
+            String Hash = null;
 
             // TODO Run in a loop x iterations
             // TODO User a better hash function
 
 
-            final MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] messageDigest = md.digest(contat.getBytes());
+            final MessageDigest sha = MessageDigest.getInstance("SHA-512");
+            byte[] messageDigest = sha.digest(contat.getBytes());
+            //Hash = BaseEncoding.base16().lowerCase().encode(messageDigest);
+            for (int i = 0; i < iterations; i++) {
+                // Concatenate the hash bytes with the clearPassword bytes and rehash
+                messageDigest = sha.digest(ArrayUtils.addAll(messageDigest, contat.getBytes()));
+            }
+
             final String passwordHash = BaseEncoding.base16().lowerCase().encode(messageDigest);
 
 
@@ -95,6 +109,7 @@ public class UserController extends Controller {
             e.printStackTrace();
             return null;
         }
+
     }
 
     @Transactional
@@ -139,9 +154,16 @@ public class UserController extends Controller {
     @Transactional
     private String generateAccessToken() {
 
-        // TODO Generate a random string of 20 (or more characters)
+        int length = 20;
+        boolean useLetters = true;
+        boolean useNumbers = true;
 
-        return "ABC1234";
+        RandomStringGenerator generator = new RandomStringGenerator.Builder()
+                .withinRange('a', 'z').build();
+        String randomLetters = generator.generate(20);
+        LOGGER.debug("salt generated is" + randomLetters);
+
+        return randomLetters;
     }
 
 
