@@ -3,9 +3,7 @@ import daos.HomeDao;
 import daos.HomeDaoImpl;
 import daos.UserDao;
 import daos.UserDaoImpl;
-import services.ApplicationTimer;
-import services.AtomicCounter;
-import services.Counter;
+import services.*;
 
 import java.time.Clock;
 
@@ -23,7 +21,7 @@ public class Module extends AbstractModule {
 
     @Override
     public void configure() {
-
+        bind(ImageStore.class).to(ImageStoreImpl.class);
         bind(HomeDao.class).to(HomeDaoImpl.class);
         bind(UserDao.class).to(UserDaoImpl.class);
         // Use the system clock as the default implementation of Clock

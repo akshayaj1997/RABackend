@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/nidhi_p/Documents/dev/RABackend/conf/routes
-// @DATE:Thu Feb 07 14:33:45 IST 2019
+// @DATE:Fri Feb 08 15:20:57 IST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -8,10 +8,10 @@ import play.api.routing.JavaScriptReverseRoute
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:5
+// @LINE:6
 package controllers.javascript {
 
-  // @LINE:24
+  // @LINE:31
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:31
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
@@ -31,7 +31,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:19
+  // @LINE:26
   class ReverseCountController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +39,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:26
     def count: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CountController.count",
       """
@@ -51,7 +51,47 @@ package controllers.javascript {
   
   }
 
-  // @LINE:12
+  // @LINE:6
+  class ReverseImageController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:7
+    def downloadImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ImageController.downloadImage",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "images/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:8
+    def deleteImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ImageController.deleteImage",
+      """
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "images/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:6
+    def uploadImage: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.ImageController.uploadImage",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "images"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:19
   class ReverseUserController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -59,7 +99,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:20
     def getCurrentUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.getCurrentUser",
       """
@@ -69,7 +109,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:19
     def registerUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.registerUser",
       """
@@ -79,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:22
     def signOutUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.signOutUser",
       """
@@ -89,7 +129,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:21
     def signInUser: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.signInUser",
       """
@@ -101,7 +141,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:5
+  // @LINE:12
   class ReverseHomeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -109,7 +149,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:7
+    // @LINE:14
     def updateHomeById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.updateHomeById",
       """
@@ -119,7 +159,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
+    // @LINE:15
     def deleteHomeById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteHomeById",
       """
@@ -129,7 +169,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:6
+    // @LINE:13
     def getHomeById: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.getHomeById",
       """
@@ -139,7 +179,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:5
+    // @LINE:12
     def createHome: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.createHome",
       """
@@ -149,7 +189,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:16
     def getAllHomes: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.getAllHomes",
       """
@@ -161,7 +201,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:21
+  // @LINE:28
   class ReverseAsyncController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -169,7 +209,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:21
+    // @LINE:28
     def message: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.AsyncController.message",
       """

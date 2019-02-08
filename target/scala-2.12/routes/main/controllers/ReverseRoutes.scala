@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/nidhi_p/Documents/dev/RABackend/conf/routes
-// @DATE:Thu Feb 07 14:33:45 IST 2019
+// @DATE:Fri Feb 08 15:20:57 IST 2019
 
 import play.api.mvc.Call
 
@@ -8,17 +8,17 @@ import play.api.mvc.Call
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:5
+// @LINE:6
 package controllers {
 
-  // @LINE:24
+  // @LINE:31
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:24
+    // @LINE:31
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
@@ -26,14 +26,14 @@ package controllers {
   
   }
 
-  // @LINE:19
+  // @LINE:26
   class ReverseCountController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:19
+    // @LINE:26
     def count(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "count")
@@ -41,32 +41,59 @@ package controllers {
   
   }
 
-  // @LINE:12
+  // @LINE:6
+  class ReverseImageController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:7
+    def downloadImage(id:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "images/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)))
+    }
+  
+    // @LINE:8
+    def deleteImage(id:String): Call = {
+      
+      Call("DELETE", _prefix + { _defaultPrefix } + "images/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)))
+    }
+  
+    // @LINE:6
+    def uploadImage(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "images")
+    }
+  
+  }
+
+  // @LINE:19
   class ReverseUserController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:20
     def getCurrentUser(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "users/me")
     }
   
-    // @LINE:12
+    // @LINE:19
     def registerUser(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "users")
     }
   
-    // @LINE:15
+    // @LINE:22
     def signOutUser(): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "users/signout")
     }
   
-    // @LINE:14
+    // @LINE:21
     def signInUser(): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "users/signin")
@@ -74,38 +101,38 @@ package controllers {
   
   }
 
-  // @LINE:5
+  // @LINE:12
   class ReverseHomeController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:7
+    // @LINE:14
     def updateHomeById(id:Integer): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
     }
   
-    // @LINE:8
+    // @LINE:15
     def deleteHomeById(id:Integer): Call = {
       
       Call("DELETE", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
     }
   
-    // @LINE:6
+    // @LINE:13
     def getHomeById(id:Integer): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "homes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
     }
   
-    // @LINE:5
+    // @LINE:12
     def createHome(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "homes")
     }
   
-    // @LINE:9
+    // @LINE:16
     def getAllHomes(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "homes")
@@ -113,14 +140,14 @@ package controllers {
   
   }
 
-  // @LINE:21
+  // @LINE:28
   class ReverseAsyncController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:21
+    // @LINE:28
     def message(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "message")

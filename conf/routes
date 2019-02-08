@@ -2,6 +2,13 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
+
+POST /images             controllers.ImageController.uploadImage()
+GET /images/:id          controllers.ImageController.downloadImage(id: String)
+DELETE /images/:id       controllers.ImageController.deleteImage(id: String)
+
+
+
 POST /homes              controllers.HomeController.createHome()
 GET  /homes/:id          controllers.HomeController.getHomeById(id: Integer)
 PUT  /homes/:id          controllers.HomeController.updateHomeById(id: Integer)

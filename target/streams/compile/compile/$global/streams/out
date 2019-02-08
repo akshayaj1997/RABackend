@@ -1,2 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RABackend/app/controllers/UserController.java:168:1: unreachable statement[0m
-[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/nidhi_p/Documents/dev/RABackend/app/services/ImageStoreImpl.java:3:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   class ImagesController[0m
+[0m[[0m[31merror[0m] [0m[0m  location: package controllers[0m
+[0m[[0m[31merror[0m] [0m[0mimport controllers.ImagesController;[0m

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/nidhi_p/Documents/dev/RABackend/conf/routes
-// @DATE:Thu Feb 07 14:33:45 IST 2019
+// @DATE:Fri Feb 08 15:20:57 IST 2019
 
 
 package router {

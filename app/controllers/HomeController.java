@@ -10,6 +10,9 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class HomeController extends Controller {
@@ -56,6 +59,30 @@ public class HomeController extends Controller {
         final Optional<Home> home = homeDao.read(id);
         if (home.isPresent()) {
             final JsonNode result = Json.toJson(home.get());
+            final Home homee = Json.fromJson(result, Home.class);
+
+            String fromDate1 = homee.getFromDate().toString();
+            String toDate1 = homee.getToDate().toString();
+            //formatting date in Java using SimpleDateFormat
+            DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd hh:mm");
+
+            String dateObj1;
+            String dateObj2;
+
+            try {
+                dateObj1 = DATE_FORMAT.format(formatter.parse(fromDate1));
+                LOGGER.debug("date  "+dateObj1);
+                dateObj2 = DATE_FORMAT.format(formatter.parse(toDate1));
+                //home.setFromDate(dateObj1);
+                //make use of the date
+                LOGGER.debug("from date is " + dateObj1);
+                //home.setToDate(dateObj2);
+                LOGGER.debug("to date is " + dateObj2);
+
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
             return ok(result);
         } else {
             return notFound();

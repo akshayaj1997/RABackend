@@ -44,33 +44,6 @@ public class HomeDaoImpl implements HomeDao {
         }
 
         final Home home = jpaApi.em().find(Home.class, Id);
-        if(null == home){
-            return Optional.empty();
-        }
-        String fromDate1 = home.getFromDate().toString();
-        String toDate1 = home.getToDate().toString();
-        //formatting date in Java using SimpleDateFormat
-        DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-mm-dd hh:mm");
-
-        String dateObj1;
-        String dateObj2;
-
-        try {
-            dateObj1 = DATE_FORMAT.format(formatter.parse(fromDate1));
-            LOGGER.debug("date  "+dateObj1);
-            dateObj2 = DATE_FORMAT.format(formatter.parse(toDate1));
-            //home.setFromDate(dateObj1);
-            //make use of the date
-            LOGGER.debug("from date is " + dateObj1);
-            //home.setToDate(dateObj2);
-            LOGGER.debug("to date is " + dateObj2);
-
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-
 
         return home != null ? Optional.of(home) : Optional.empty();
 
