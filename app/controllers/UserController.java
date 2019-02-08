@@ -108,7 +108,7 @@ public class UserController extends Controller {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             return null;
-        }
+          }
 
     }
 
@@ -164,6 +164,7 @@ public class UserController extends Controller {
         LOGGER.debug("salt generated is" + randomLetters);
 
         return randomLetters;
+
     }
 
 

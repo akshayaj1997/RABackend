@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RABackend.iml" filepath="$PROJECT_DIR$/.idea/modules/RABackend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/play-java-starter-example.iml" filepath="$PROJECT_DIR$/.idea/modules/play-java-starter-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/play-java-starter-example-build.iml" filepath="$PROJECT_DIR$/.idea/modules/play-java-starter-example-build.iml" />
     </modules>

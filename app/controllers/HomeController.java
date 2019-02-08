@@ -31,13 +31,14 @@ public class HomeController extends Controller {
         final Home home = Json.fromJson(json, Home.class);
 
         LOGGER.debug("Home title = " + home.getName());
-        LOGGER.error("This is an error");
+        //LOGGER.error("This is an error");
 
         if (null == home.getName()) {
             return badRequest("Title must be provided");
         }
-
+        LOGGER.debug("entering create home");
         final Home newHome = homeDao.create(home);
+        LOGGER.debug("created home");
 
         final JsonNode result = Json.toJson(newHome);
 

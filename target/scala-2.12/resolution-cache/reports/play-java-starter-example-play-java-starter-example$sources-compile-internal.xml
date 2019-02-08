@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20190207120450"/>
+		date="20190208124236"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-logback_2.12">
 			<revision name="2.6.20" status="release" pubdate="20181008205440" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" extra-info.apiURL="https://www.playframework.com/documentation/2.6.20/api/scala/index.html" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="75">
@@ -231,7 +231,7 @@
 				<metadata-artifact status="no" details="" size="16702" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/ivy-1.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6.pom"/>
 				<caller organisation="play-java-starter-example" name="play-java-starter-example$sources" conf="compile-internal, compile, provided, optional" rev="1.6" rev-constraint-default="1.6" rev-constraint-dynamic="1.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="commons-text" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="230466" time="1604" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/srcs/commons-text-1.6-sources.jar">
+					<artifact name="commons-text" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="230466" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/srcs/commons-text-1.6-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -243,7 +243,7 @@
 				<metadata-artifact status="no" details="" size="14915" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.pom"/>
 				<caller organisation="play-java-starter-example" name="play-java-starter-example$sources" conf="compile-internal, compile, provided, optional" rev="3.8.1" rev-constraint-default="3.8.1" rev-constraint-dynamic="3.8.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="553442" time="3558" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.8.1-sources.jar">
+					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="553442" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.8.1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar"/>
 					</artifact>
 				</artifacts>

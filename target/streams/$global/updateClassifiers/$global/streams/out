@@ -13275,20 +13275,19 @@
 [debug] circular dependency found: org.seleniumhq.selenium#htmlunit-driver;2.27->net.sourceforge.htmlunit#htmlunit;2.27->...
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-jpa_2.12;2.6.20!play-java-jpa_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.11!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] javax.activation#javax.activation-api;1.2.0!javax.activation-api.jar(src)
-[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.11!jackson-core.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-jpa_2.12;2.6.20!play-java-jpa_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.11!reflections.jar(src)
 [debug] 	[NOT REQUIRED] org.hibernate#hibernate-core;5.3.7.Final!hibernate-core.jar(src)
+[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.17!akka-stream_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.12;2.6.10!play-functional_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-java_2.12;2.6.20!play-java_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.jboss#jandex;2.0.5.Final!jandex.jar(src)
-[debug] 		tried /Users/nidhi_p/.ivy2/local/org.apache.commons/commons-text/1.6/srcs/commons-text-sources.jar
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-text;1.6!commons-text.jar(src)
 [debug] 	[NOT REQUIRED] io.jsonwebtoken#jjwt;0.7.0!jjwt.jar(src)
 [debug] 	[NOT REQUIRED] org.javassist#javassist;3.23.1-GA!javassist.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.12;2.6.10!play-json_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-streams_2.12;2.6.20!play-streams_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.slf4j#jul-to-slf4j;1.7.25!jul-to-slf4j.jar(src)
@@ -13297,8 +13296,8 @@
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-parsing_2.12;10.0.14!akka-parsing_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.hibernate#hibernate-entitymanager;5.3.7.Final!hibernate-entitymanager.jar(src)
 [debug] 	[NOT REQUIRED] com.googlecode.usc#jdbcdslog;1.0.6.2!jdbcdslog.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-forms_2.12;2.6.20!play-java-forms_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-core_2.12;10.0.14!akka-http-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-forms_2.12;2.6.20!play-java-forms_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.zaxxer#HikariCP;2.7.9!HikariCP.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.6.20!play-exceptions.jar(src)
@@ -13328,6 +13327,7 @@
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-protobuf_2.12;2.5.17!akka-protobuf_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.google.protobuf#protobuf-java;3.6.1!protobuf-java.jar(src)
 [debug] 	[NOT REQUIRED] org.hibernate.common#hibernate-commons-annotations;5.0.4.Final!hibernate-commons-annotations.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.8.1!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] com.google.inject#guice;4.1.0!guice.jar(src)
 [debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.1.1.Final!jboss-transaction-api_1.2_spec.jar(src)
@@ -13359,8 +13359,8 @@
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-guice_2.12;2.6.20!play-guice_2.12.jar(src)
 [debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar(src)
 [debug] 	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-support;3.5.3!selenium-support.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-test_2.12;2.6.20!play-test_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-api;9.4.5.v20170502!websocket-api.jar(src)
 [debug] 	[NOT REQUIRED] org.fluentlenium#fluentlenium-core;3.3.0!fluentlenium-core.jar(src)
@@ -13404,31 +13404,19 @@
 [debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpmime;4.5.3!httpmime.jar(src)
 [debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-remote-driver;3.5.3!selenium-remote-driver.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.7!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.parboiled#parboiled-core;1.1.7!parboiled-core.jar(src)
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.6!commons-lang3.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-docs_2.12;2.6.20!play-docs_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-doc_2.12;1.8.1!play-doc_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-omnidoc_2.12;2.6.20!play-omnidoc_2.12.jar(src)
-[debug] 		tried /Users/nidhi_p/.ivy2/local/org.apache.commons/commons-lang3/3.8.1/srcs/commons-lang3-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-analysis;5.0.3!asm-analysis.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm;5.0.3!asm.jar(src)
+[debug] 	[NOT REQUIRED] org.pegdown#pegdown;1.6.0!pegdown.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-docs_2.12;2.6.20!play-docs_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-doc_2.12;1.8.1!play-doc_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.ow2.asm#asm-tree;5.0.3!asm-tree.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-omnidoc_2.12;2.6.20!play-omnidoc_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-util;5.0.3!asm-util.jar(src)
 [debug] 	[NOT REQUIRED] org.parboiled#parboiled-java;1.1.7!parboiled-java.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[debug] 	[NOT REQUIRED] org.pegdown#pegdown;1.6.0!pegdown.jar(src)
-[debug] 	[NOT REQUIRED] org.parboiled#parboiled-core;1.1.7!parboiled-core.jar(src)
-[debug] 	[NOT REQUIRED] org.ow2.asm#asm-tree;5.0.3!asm-tree.jar(src)
-[info] downloading https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar.sha1
-[info] downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6-sources.jar
-[info] 	[SUCCESSFUL ] org.apache.commons#commons-text;1.6!commons-text.jar(src) (1604ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1-sources.jar
-[info] 	[SUCCESSFUL ] org.apache.commons#commons-lang3;3.8.1!commons-lang3.jar(src) (3558ms)
-[debug] :: resolution report :: resolve 2163ms :: artifacts dl 3600ms
+[debug] :: resolution report :: resolve 3205ms :: artifacts dl 28ms
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT compile produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-compile.xml
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT runtime produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-runtime.xml
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT test produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-test.xml
@@ -13449,4 +13437,4 @@
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT pom produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-pom.xml
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT scala-tool produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-scala-tool.xml
 [debug] 	report for play-java-starter-example#play-java-starter-example$sources;1.0-SNAPSHOT docs produced in /Users/nidhi_p/Documents/dev/RABackend/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-docs.xml
-[debug] 	resolve done (2163ms resolve - 3600ms download)
+[debug] 	resolve done (3205ms resolve - 28ms download)

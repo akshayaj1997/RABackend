@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20190207120437"/>
+		date="20190207143345"/>
 	<dependencies>
 		<module organisation="org.hibernate" name="hibernate-entitymanager">
 			<revision name="5.3.7.Final" status="release" pubdate="20181017054530" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org/orm" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="75">
@@ -309,12 +309,12 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-text">
-			<revision name="1.6" status="release" pubdate="20181013071302" resolver="public" artresolver="public" homepage="http://commons.apache.org/proper/commons-text" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="64">
+			<revision name="1.6" status="release" pubdate="20181013071302" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-text" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="64">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="successful" details="" size="16810" time="1348" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/ivy-1.6.xml" searched="true" original-local-location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/ivy-1.6.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6.pom"/>
+				<metadata-artifact status="no" details="" size="16702" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/ivy-1.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6.pom"/>
 				<caller organisation="play-java-starter-example" name="play-java-starter-example_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.6" rev-constraint-default="1.6" rev-constraint-dynamic="1.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
-					<artifact name="commons-text" type="jar" ext="jar" status="successful" details="" size="197176" time="1837" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/jars/commons-text-1.6.jar">
+					<artifact name="commons-text" type="jar" ext="jar" status="no" details="" size="197176" time="0" location="/Users/nidhi_p/.ivy2/cache/org.apache.commons/commons-text/jars/commons-text-1.6.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6.jar"/>
 					</artifact>
 				</artifacts>
