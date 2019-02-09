@@ -44,7 +44,6 @@ public class HomeDaoImpl implements HomeDao {
         }
 
         final Home home = jpaApi.em().find(Home.class, Id);
-
         return home != null ? Optional.of(home) : Optional.empty();
 
     }

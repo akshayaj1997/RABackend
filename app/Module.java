@@ -1,8 +1,6 @@
 import com.google.inject.AbstractModule;
-import daos.HomeDao;
-import daos.HomeDaoImpl;
-import daos.UserDao;
-import daos.UserDaoImpl;
+import daos.*;
+import models.Amenities;
 import services.*;
 
 import java.time.Clock;
@@ -23,6 +21,7 @@ public class Module extends AbstractModule {
     public void configure() {
         bind(ImageStore.class).to(ImageStoreImpl.class);
         bind(HomeDao.class).to(HomeDaoImpl.class);
+        bind(AmenitiesDao.class).to(AmenitiesDaoImpl.class);
         bind(UserDao.class).to(UserDaoImpl.class);
         // Use the system clock as the default implementation of Clock
         bind(Clock.class).toInstance(Clock.systemDefaultZone());
